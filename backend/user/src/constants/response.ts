@@ -5,7 +5,12 @@ const RES = {
       message: "OK",
     },
   },
-  ERROR: {},
+  ERROR: {
+    INTERNAL: {
+      status: 500,
+      message: "Internal server error",
+    },
+  },
 };
 
 export default RES;

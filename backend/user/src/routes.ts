@@ -1,5 +1,6 @@
 import { Request, Response, Express } from "express";
 import { RES } from "@constants";
+import { router } from "@api/routes";
 
 const initRoutes = (app: Express) => {
   app.get("/", (_: Request, response: Response) => {
@@ -8,6 +9,7 @@ const initRoutes = (app: Express) => {
       message,
     });
   });
+  app.use(router);
 };
 
 export default initRoutes;
