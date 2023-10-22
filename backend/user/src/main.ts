@@ -2,8 +2,8 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import initRoutes from "./routes";
-import { initLogger, getLogger } from "./utils";
-import { initDb } from "./api/db";
+import { initLogger, getLogger } from "@utils";
+import { initDb } from "@api/db";
 
 const { SERVER_PORT } = process.env;
 

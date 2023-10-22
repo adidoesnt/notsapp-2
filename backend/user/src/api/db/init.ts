@@ -1,5 +1,5 @@
 import { Surreal } from "surrealdb.node";
-import { getLogger } from "../../utils";
+import { getLogger } from "@utils";
 
 const { DB_HOST, DB_PORT, DB_USER, DB_PASS } = process.env;
 const host = DB_HOST || "localhost";
