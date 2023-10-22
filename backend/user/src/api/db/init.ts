@@ -3,7 +3,7 @@ import { getLogger } from "@utils";
 
 const { DB_HOST, DB_PORT, DB_USER, DB_PASS } = process.env;
 const host = DB_HOST || "localhost";
-const port = parseInt(DB_PORT || "2424");
+const port = parseInt(DB_PORT || "8000");
 const username = DB_USER || "";
 const password = DB_PASS || "";
 const logger = getLogger();
