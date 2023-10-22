@@ -26,6 +26,14 @@ export const initDb = async () => {
   } catch (error) {
     logger.error(`error authenticating connection, ${error}`);
   }
+  try {
+    await db.use({
+      namespace: "notsapp",
+      db: "user",
+    });
+  } catch (error) {
+    logger.error(`error setting namespace, ${error}`);
+  }
   logger.info("connected to database");
 };
 

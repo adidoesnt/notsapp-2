@@ -3,7 +3,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import initRoutes from "./routes";
 import { initLogger, getLogger } from "./utils";
-import { database, initDb } from "./api/db";
+import { initDb } from "./api/db";
 
 const { SERVER_PORT } = process.env;
 
