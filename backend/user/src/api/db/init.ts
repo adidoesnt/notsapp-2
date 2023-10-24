@@ -6,6 +6,7 @@ const host = DB_HOST || "localhost";
 const port = parseInt(DB_PORT || "8000");
 const username = DB_USER || "";
 const password = DB_PASS || "";
+const namespace = "notsapp";
 const logger = getLogger();
 
 const db = new Surreal();
@@ -20,6 +21,7 @@ export const initDb = async () => {
   }
   try {
     await db.signin({
+      namespace,
       username,
       password,
     });
@@ -28,7 +30,7 @@ export const initDb = async () => {
   }
   try {
     await db.use({
-      namespace: "notsapp",
+      namespace,
       db: "user",
     });
   } catch (error) {
