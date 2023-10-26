@@ -10,6 +10,10 @@ const RES = {
       status: 500,
       message: "Internal server error",
     },
+    NOT_FOUND: {
+      status: 404,
+      message: "Requested resource not found",
+    },
   },
 };
 

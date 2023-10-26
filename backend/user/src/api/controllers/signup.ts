@@ -2,6 +2,9 @@ import type { User } from "@api/repository/types";
 import { Request, Response } from "express";
 import { signup } from "@api/services";
 import { RES } from "@constants";
+import { getLogger } from "@utils";
+
+const logger = getLogger();
 
 const signupController = async (request: Request, response: Response) => {
   const { body } = request;
@@ -15,6 +18,7 @@ const signupController = async (request: Request, response: Response) => {
     });
   } else {
     const { status, message } = RES.ERROR.INTERNAL;
+    logger.error(message);
     return response.status(status).json({
       message,
     });
