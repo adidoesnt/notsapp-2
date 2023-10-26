@@ -12,8 +12,7 @@ const createUser = async ({
   uuid,
 }: User) => {
   try {
-    const user = await database.create("notsapp:user", {
-      uuid,
+    const user = await database.create(`t_user:${uuid}`, {
       username,
       name: {
         firstName,
